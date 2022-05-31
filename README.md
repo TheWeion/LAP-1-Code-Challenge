@@ -11,7 +11,6 @@
 ### Usage
 
 * Run `npm start` to launch server.
-* 
 
 ## Changelog
 
