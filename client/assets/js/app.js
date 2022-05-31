@@ -41,24 +41,6 @@ function appendQuery(queryData){
 };
 
 //
-// ─── MESSAGE FLOW ───────────────────────────────────────────────────────────────
-//
- 
-function getMessage(){
-    fetch('http://localhost:3000')
-        .then(r => r.text())
-        .then(renderMessage)
-        .catch(console.warn)
-};
-
-function renderMessage(msgText){
-    const msg = document.createElement('p');
-    msg.textContent = msgText;
-    msg.style.color = 'red';
-    document.body.append(msg);
-};
-
-//
 // ─── MODULE EXPORTS ─────────────────────────────────────────────────────────────
 //
 
@@ -66,8 +48,6 @@ module.exports = {
     submitSearch,
     appendQueries,
     appendQuery,
-    getMessage,
-    renderMessage
 }
 
 //

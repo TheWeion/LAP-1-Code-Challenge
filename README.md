@@ -29,4 +29,12 @@
 
 ## Bugs
 
-[] 
+### Client-Side
+
+#### app.js
+
+[ ] `module.exports` on line 47 is getting an ReferenceError exception stating that it isn't defined.
+
+#### index.html
+
+[ ] Search button not producing JSON output to new `li` elements like expected.
