@@ -1,4 +1,18 @@
 //
+// ─── INDEX.JS ───────────────────────────────────────────────────────────────────
+//
+// Purpose: Setup events and selectors for the client-side.
+//
+// ────────────────────────────────────────────────────────────────────────────────
+//
+
+const submitForm = document.querySelector('#search-form');
+
+// Bind event listeners
+submitForm.addEventListener('submit', submitSearch);
+
+
+//
 // ─── APP.JS ─────────────────────────────────────────────────────────────────────
 //
 // Purpose: Configure client-side implementation using SerpApi.
@@ -7,11 +21,11 @@
 //
 
 function submitSearch(e){
-    // const input = document.querySelector('#search-query').textContent;
     e.preventDefault();
-    fetch('http://localhost:4000/')
-        .then(r => r.json())
-        .then(data => console.log(data))
+    const input = document.querySelector('#search-query').textContent;
+    fetch('https://serpapi.com/search.json?engine=google&q=Coffee&google_domain=google.com&gl=uk&hl=en&num=10&api_key=64dee81450e011179f21e323a3eaed6743f56bbcfe6386372c5977677934d5bc')
+    .then(r => r.json())
+    .then(data => console.log(data['organic_results']))
 };
 
 //
@@ -34,12 +48,17 @@ function appendQuery(queryData){
 // ─── MODULE EXPORTS ─────────────────────────────────────────────────────────────
 //
 
-module.exports = {
-    submitSearch,
-    appendQueries,
-    appendQuery
-};
+// module.exports = {
+//     submitSearch,
+//     appendQueries,
+//     appendQuery
+// };
 
 //
 // ────────────────────────────────────────────────────────────────────────────────
 //
+
+
+fetch('https://serpapi.com/search.json?engine=google&q=Coffee&google_domain=google.com&gl=uk&hl=en&num=10&api_key=64dee81450e011179f21e323a3eaed6743f56bbcfe6386372c5977677934d5bc')
+    .then(r => r.json())
+    .then(data => console.log(data['organic_results']))
