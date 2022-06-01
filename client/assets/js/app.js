@@ -47,8 +47,8 @@ function appendQuery(queryData){
 module.exports = {
     submitSearch,
     appendQueries,
-    appendQuery,
-}
+    appendQuery
+};
 
 //
 // ────────────────────────────────────────────────────────────────────────────────
