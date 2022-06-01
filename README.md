@@ -14,14 +14,27 @@
 
 ## Changelog
 
-### index.html
+### Client-Side
+#### index.html
 
-[x] 
+[x] Added `index.html` with client-side scripts linked externally
 
-### server.js
+#### app.js
 
-[x] 
+[x] Added first iteration of API calls from SerpApi to get Google results via JSON.
+
+#### index.js
+
+[x] Added event listeners and selectors for the HTML UI elements to interface with the client-side scripts.
 
 ## Bugs
 
-[] 
+### Client-Side
+
+#### app.js
+
+[ ] `module.exports` on line 47 is getting an ReferenceError exception stating that it isn't defined.
+
+#### index.html
+
+[ ] Search button not producing JSON output to new `li` elements like expected.
