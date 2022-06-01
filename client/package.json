@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch --silent",
+    "dev": "nodemon index.js",
     "coverage": "jest --coverage --silent"
   },
   "keywords": [],
