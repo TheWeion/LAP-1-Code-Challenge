@@ -35,8 +35,9 @@ function appendQueries(queries){
 
 function appendQuery(queryData){
     const newLi = document.createElement('li');
+    newli.className = 'list-group-item list-group-item-action';
     newLi.textContent = `${queryData.title} || ${queryData.link} || ${queryData.snippet}`
-    const queriesList = document.querySelector('ul');
+    const queriesList = document.querySelector('#search-results');
     queriesList.append(newLi);
 };
 
